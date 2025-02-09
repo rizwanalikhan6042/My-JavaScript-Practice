@@ -19,3 +19,32 @@ function printAge(){
 
 print(printName,printLastName,printAge);
 
+// Area of circle
+let r=[23,2,5,67];
+function calArea(radius){
+    let res=[];
+    for(let i=0;i<radius.length;i++){
+        res.push(3.14*radius[i]*radius[i]);
+    }
+    return res;
+}
+let finalAns=calArea(r);
+console.log(finalAns);
+// circumference
+let radius=[2,6,7,8,9,6];
+function calCircum(r){
+    let res=[];
+    for(let i=0;i<r.length;i++){
+        res.push(2*Math.PI*r[i])
+    }
+    return res;
+}
+
+let circum=calCircum(radius);
+console.log(circum);
+
+
+
+
+
+
