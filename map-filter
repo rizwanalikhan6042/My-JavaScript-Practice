@@ -14,3 +14,12 @@ let mapcircum=radius.map(function(r){
     return 2*Math.PI*r;
 })
 console.log(mapcircum);
+let even=arr.filter(function(num){
+    return num%2==0;
+})
+console.log(even)
+const trans=[-2,45,6,7,8,-9]
+let positive=trans.filter(function(num){
+    return num>0;
+})
+console.log(positive);
