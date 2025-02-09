@@ -1,0 +1,21 @@
+function print(cb,cb1,cb2){
+    cb();
+    cb1();
+    cb2();
+}
+
+function printName(){
+    console.log("Ali")
+    
+}
+function printLastName()
+{
+    console.log("Khan");
+    
+}
+function printAge(){
+    console.log(29);
+}
+
+print(printName,printLastName,printAge);
+
