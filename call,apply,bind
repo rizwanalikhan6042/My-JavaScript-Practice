@@ -1,0 +1,11 @@
+const person1 = {
+    name:"Rizwan",
+    greet:function(city,age,country){
+        console.log(`${this.name} is ${age} years old and lives in ${country} in ${city}`)
+    }
+}
+person2={
+    name:"Ali",
+    
+}
+const hero=person1.greet.apply(person2,["Etah","45","India"])
