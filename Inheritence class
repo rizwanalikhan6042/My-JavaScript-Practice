@@ -19,3 +19,25 @@ class student1 extends person{
 }
 const student2=new student1("Rizwan",100,"Fail")
 student2.study();
+//overriding 
+class animal{
+    constructor(name,lang){
+        this.name=name
+        this.lang=lang
+    }
+    speak(){
+        console.log(`${this.name} making sound`)
+    }
+}
+class dog extends animal{
+    constructor(name){
+        super(name)
+        this.name=name
+        
+    }
+    speak(){
+        console.log(`${this.name} barking`)
+    }
+}
+const dog1=new dog("puppy");
+dog1.speak()
