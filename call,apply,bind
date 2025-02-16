@@ -9,3 +9,17 @@ person2={
     
 }
 const hero=person1.greet.apply(person2,["Etah","45","India"])
+
+const person1={
+    name:"Rizwan",
+    greet:function(msg,age,city){
+        console.log(`${msg} I am ${this.name} and my age is ${age} and i live in ${city}`)
+    }
+}
+const person2={
+    name:"Ali"
+}
+const person=person1.greet.bind(person2,"hey",34,"Etah");
+person()
+const hrm=person1.greet.bind(person2,"hey",45,"noida")
+hrm()
