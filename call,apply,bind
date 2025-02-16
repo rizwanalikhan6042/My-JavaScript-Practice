@@ -23,3 +23,4 @@ const person=person1.greet.bind(person2,"hey",34,"Etah");
 person()
 const hrm=person1.greet.bind(person2,"hey",45,"noida")
 hrm()
+
