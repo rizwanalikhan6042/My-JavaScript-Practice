@@ -1,0 +1,20 @@
+function updateobj(obj){
+    obj.age=30;
+    console.log("inside fn",obj);
+}
+let person={name:"rizwan",age:40}
+updateobj(person);
+console.log("out",person)
+(* inside fn { name: 'rizwan', age: 30 }
+out { name: 'rizwan', age: 30 } *)
+
+function replace(obj){
+    obj={name:"rizwan",age:45}
+}
+person={name:"riz",age:45}
+replace(person)
+console.log(person)
+//o/p
+(* { name: 'riz', age: 45 } *)
+
+=== Code Execution Successful ===
