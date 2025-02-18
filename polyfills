@@ -1,0 +1,36 @@
+//polyfill of map
+let arr=[2,3,4,5,6]
+function sq(num){
+    return num*num;
+}
+
+function polyfillofMap(arr,cb){
+    let myArr=[]
+    for(let i=0;i<arr.length;i++){
+        myArr.push(cb(arr[i]))
+    }
+    return myArr
+}
+let riz=polyfillofMap(arr,sq);
+console.log(riz)
+[ 2, 4, 6, 8 ]
+
+=== Code Execution Successful ===
+//polyfill of filter
+let arr=[2,4,5,6,8,9]
+function polyfilloffilter(arr,cb){
+    let myArr=[]
+    for(let i=0;i<arr.length;i++){
+        if(cb(arr[i]))
+        myArr.push(cb(arr[i]));
+    }
+    return myArr
+}
+function even(num){
+  if(num%2===0){
+      return num
+  }
+    
+}
+let riz=polyfilloffilter(arr,even)
+console.log(riz)
