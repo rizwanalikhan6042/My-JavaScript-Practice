@@ -1,0 +1,33 @@
+//currying 
+function crtry(a){
+    function crtry1(b){
+        return a+b
+    }
+    return crtry1
+}
+let riz=crtry(2)(3)
+console.log(riz)
+// second way 
+let riz=crtry(2)
+console.log(riz(3))
+//infinite curry
+function counter(n){
+    let c=0;
+    c++;
+    if(n==0){
+        return c;
+    } else{
+        return function inner(n){
+            c++;
+            if(n===0){
+                return c
+            } else{
+                return inner
+            }
+        }
+    }
+}
+let riz=counter()()(0)
+console.log(riz)
+//output 
+3
