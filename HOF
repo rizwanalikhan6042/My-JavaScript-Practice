@@ -27,3 +27,8 @@ let riz=arr.reduce(function(acc,num){
     return acc;
 },1)
 console.log(riz)
+//foreach
+let riz=[2,4,6,8]
+let siz=riz.forEach(function(num){
+    console.log(num*2)
+})
