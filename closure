@@ -1,0 +1,31 @@
+//Closure yeh hota hai ki even though outer() function execution khatam ho gaya, 
+//lekin inner() function still outerVar ko access kar sakta hai. Yeh uska lexical scope yaad rakhne ki wajah se hota hai.
+
+function outer(){
+    let outervar="Hi,I am outside,Dont call me again"
+    function inner(){
+        console.log(outervar);
+    }
+    return inner
+}
+let closureTry=outer()
+closureTry()
+//2nd ex
+function count(){
+    let count=0;
+    function inner(){
+        count++;
+        console.log(count);
+    }
+    return inner
+}
+let count1=count()
+count1();
+count1()
+count1()
+//output
+1
+2
+3
+
+
