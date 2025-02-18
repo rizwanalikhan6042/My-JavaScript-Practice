@@ -32,3 +32,11 @@ let riz=[2,4,6,8]
 let siz=riz.forEach(function(num){
     console.log(num*2)
 })
+let arr=[2,4,5,6]
+let tea=arr.forEach(function(num){
+    if(num%2==0){
+        console.log("Even Value", num)
+    } else{
+        console.log("Odd Value",num)
+    }
+})
