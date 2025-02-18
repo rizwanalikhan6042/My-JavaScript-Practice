@@ -1,0 +1,29 @@
+function salam(name,cb){
+    console.log(name+ " Assalamu Alaikum")
+    cb();
+}
+function alwida(){
+    console.log("Khuda Hafiz");
+}
+salam("Rizwan",alwida);
+//output
+Rizwan Assalamu Alaikum
+Khuda Hafiz
+let arr=[2,3,4,5,6]
+function sq(num){
+return num*num;
+    
+}
+let riz=arr.map(sq)
+console.log(riz)
+function fil(num){
+    return (num%2===0);
+}
+let riz1=arr.filter(fil)
+console.log(riz1)
+let arr=[ 4, 9, 16, 25, 36 ]
+let riz=arr.reduce(function(acc,num){
+    acc=acc*num;
+    return acc;
+},1)
+console.log(riz)
