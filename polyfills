@@ -34,3 +34,19 @@ function even(num){
 }
 let riz=polyfilloffilter(arr,even)
 console.log(riz)
+//reduce
+let arr=[2,3,4,5,6,90,90]
+Array.prototype.myReduce = function(cb , initialValue){
+    let accumulator = initialValue
+
+    for(let i=0 ; i<this.length ; i++){
+        accumulator = cb(accumulator , this[i])
+    }
+
+    return accumulator
+}
+let riz=arr.myReduce(function(acc,num){
+    acc=acc+num
+    return acc
+},0)
+console.log(riz)
