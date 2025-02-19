@@ -32,6 +32,6 @@ const person1=new person("Rizwan","Ali")
 // console.log(person1.age)
 person1.saystrict();
 //o/p
-Salam,My name is Rizwan Ali and age is 24
+//Salam,My name is Rizwan Ali and age is 24
 
-=== Code Execution Successful ===
+// prototype ko lecture se hi pada hai
