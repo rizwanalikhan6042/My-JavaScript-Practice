@@ -31,3 +31,12 @@ let riz=counter()()(0)
 console.log(riz)
 //output 
 3
+function a1(a){
+    return function(b){
+        return function(c){
+            return a+b+c
+        }
+    }
+}
+console.log(a1(2)(3)(40))
+//o/p 45
