@@ -1,0 +1,10 @@
+function person(name,age){
+    this.name=name
+    this.age=age
+}
+person.prototype.saySalam=function(){
+    console.log(`Assalamu Alaikum my name is ${this.name}`)
+}
+const newperson1=new person("Rizwan",27);
+newperson1.saySalam()
+
