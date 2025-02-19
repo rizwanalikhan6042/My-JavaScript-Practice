@@ -7,4 +7,31 @@ person.prototype.saySalam=function(){
 }
 const newperson1=new person("Rizwan",27);
 newperson1.saySalam()
+//2nd example
+function person(fname,lname){
+    this.firstName=fname
+    this.lastName=lname
+}
 
+person.prototype.age=24;
+const person1=new person("Rizwan","Ali")
+console.log(person1.age)
+
+//3rd
+function person(fname,lname){
+    this.firstName=fname
+    this.lastName=lname
+}
+
+person.prototype.age=24;
+person.prototype.saystrict=function(){
+    console.log(`Salam,My name is ${this.firstName} ${this.lastName} and age is ${this.age}`
+    )
+}
+const person1=new person("Rizwan","Ali")
+// console.log(person1.age)
+person1.saystrict();
+//o/p
+Salam,My name is Rizwan Ali and age is 24
+
+=== Code Execution Successful ===
