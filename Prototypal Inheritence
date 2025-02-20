@@ -1,0 +1,15 @@
+const animal={
+    name:"Buddy",
+    age:12,
+    speak:function(){
+        console.log(`Hi,My name is ${this.name}`)
+    }
+}
+const rabbit=Object.create(animal);
+rabbit.name="Buddy_rabbit"
+rabbit.age=23
+rabbit.umr=function(){
+    console.log(`Hi,My age is ${this.age}`)
+}
+rabbit.umr()
+rabbit.speak()
