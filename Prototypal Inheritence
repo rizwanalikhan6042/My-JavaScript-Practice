@@ -13,3 +13,20 @@ rabbit.umr=function(){
 }
 rabbit.umr()
 rabbit.speak()
+//2nd ex
+const seeDreamOfJob={
+    name:"Rizwan",
+    skills:["DSA","JS"],
+    Interview:function(){
+        console.log(`Hi,My name is ${this.name} and my skills are ${this.skills[0]} and ${this.skills[1]}`)
+    }
+    
+    
+}
+const dream11={
+    name:"Ali"
+}
+Object.setPrototypeOf(dream11,seeDreamOfJob);
+dream11.Interview()
+o/p Hi,My name is Ali and my skills are DSA and JS
+
