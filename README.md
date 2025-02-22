@@ -1,5 +1,4 @@
 # My-JavaScript-Practice
-# JavaScript Concepts Practice
 
 Welcome to my JavaScript practice repository! 🚀 This repo contains my notes, examples, and implementations of key JavaScript concepts. The goal is to strengthen my understanding of the language, especially for interviews and real-world applications.
 
