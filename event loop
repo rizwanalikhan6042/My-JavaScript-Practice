@@ -1,0 +1,35 @@
+console.log("start");
+setTimeout(()=>{
+    console.log("setTime Out")
+},0)
+Promise.resolve().then(()=>{
+    console.log("Promise resolved");
+})
+console.log("End")
+//output
+start
+End
+Promise resolved
+setTime Out
+
+console.log("start");
+setTimeout(()=>{
+    console.log("setTime Out 1")
+},0)
+setTimeout(()=>{
+    console.log("setTime Out 2")
+},10)
+Promise.resolve().then(()=>{
+    console.log("Promise resolved 1");
+})
+Promise.resolve().then(()=>{
+    console.log("Promise resolved 2");
+})
+console.log("End")
+start
+End
+Promise resolved 1
+Promise resolved 2
+setTime Out 1
+setTime Out 2
+
