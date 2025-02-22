@@ -15,4 +15,24 @@ myPromise
 .catch((result)=>{
     console.log("na ho paya")
 })
-na ho paya
+//output na ho paya
+//promises chain
+new Promise((resolve)=>{
+    setTimeout(()=>{
+        console.log("Rizwan")
+    },100)
+    
+})
+.then((res)=>{
+    console.log(res);
+    return new Promise((resolve)=>{
+        setTimeout(()=>resolve("step2"),1000)
+    })
+})
+.then((result)=>{
+    console.log(result);
+})
+.catch((error)=>{
+    console.log(error)
+})
+//output Rizwan
