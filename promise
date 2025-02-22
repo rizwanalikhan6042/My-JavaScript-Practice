@@ -1,0 +1,18 @@
+let myPromise = new Promise((resolve,reject)=>{
+    let success=false;
+    setTimeout(()=>{
+        if(success){
+            resolve("Successful");
+        } else{
+            reject("Reject");
+        }
+    },1000)
+})
+myPromise
+.then((result)=>{
+    console.log("successful ho gaya")
+})
+.catch((result)=>{
+    console.log("na ho paya")
+})
+na ho paya
