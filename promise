@@ -55,4 +55,24 @@ new Promise((resolve)=>{
 o/p
 step1
 step2
+console.log("Start")
+setTimeout(()=>{
+console.log("rizwan")
+},0)
+let promise1=new Promise((resolve,reject)=>{
+let success=true
+if(success)
+resolve("Rizwan 0 B")
+else
+reject("fail")
 
+})
+promise1.then((result)=>{
+console.log("data is",result)
+}).catch((error)=>{
+console.log("fail",error)
+})
+o/p
+Start
+data is Rizwan 0 B
+rizwan
