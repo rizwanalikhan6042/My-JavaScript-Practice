@@ -1,0 +1,18 @@
+const fs = require('fs').promises;
+
+async function fileReadKaro() {
+    try {
+        let data1 = await fs.readFile('C::/Users/Dell/Documents/ideas', 'utf8');
+        console.log("file 1 data is", data1);
+
+        let data2 = await fs.readFile('C::/Users/Dell/Documents/dsa techniques', 'utf8');
+        console.log("file 2 data is", data2);
+
+        let data3 = await fs.readFile('C::/Users/Dell/Documents/dsa techniques', 'utf8');
+        console.log("file 3 data is", data3);
+    } catch (err) {
+        console.log("error is", err);
+    }
+}
+
+fileReadKaro();
