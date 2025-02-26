@@ -16,3 +16,60 @@ async function fileReadKaro() {
 }
 
 fileReadKaro();
+//big example 
+function placeOrder(coffeeType){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log(`Order for ${coffeeType} is placed`)
+            resolve(coffeeType)
+        },2000)
+    })
+    
+}
+function ProcessOrder(coffeeType){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log(`${coffeeType} is being prepared`)
+            resolve(`${coffeeType} is ready`);
+        },1000)
+    })
+}
+function genBill(coffeeType){
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            console.log(`This is bill for ${coffeeType}`)
+            resolve(`${coffeeType} bill`)
+        },1500)
+    })
+}
+async function CoffeeShop(coffeeType){
+    try{
+        console.log("Welcome meri coffee shop me")
+        let order=await placeOrder(coffeeType)
+        console.log(order)
+        let processOrder= await ProcessOrder(coffeeType)
+        console.log(processOrder)
+        let bill = await genBill(coffeeType)
+        console.log(bill)
+        
+        console.log('Shukriya ! Alwida')
+    }
+    catch(error) {
+        console.log('error is',error)
+    }
+}
+CoffeeShop("Cappuccino")
+
+//output 
+Welcome meri coffee shop me
+Order for Cappuccino is placed
+Cappuccino
+Cappuccino is being prepared
+Cappuccino is ready
+This is bill for Cappuccino
+Cappuccino bill
+Shukriya ! Alwida
+
+
+
+
