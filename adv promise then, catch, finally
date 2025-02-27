@@ -1,3 +1,4 @@
+//promise.all
 const p1=new Promise((resolve,reject)=>{
    setTimeout(()=>{
        resolve('Rizwan');
@@ -45,3 +46,27 @@ Promise.all([p1,p2,p3])
 })
 o/p 
 khan
+//promise.race
+const p1=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Rizwan')
+    },1500)
+})
+const p2=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Ali')
+    },1900)
+})
+const p3=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        reject('Khan')
+    },1200)
+})
+Promise.race([p1,p2,p3])
+.then((result)=>{
+    console.log('data is',result)
+}).catch((err)=>{
+    console.log(err)
+})
+o/p
+Khan
