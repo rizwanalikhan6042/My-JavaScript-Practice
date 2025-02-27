@@ -22,3 +22,26 @@ Promise.all([p1,p2,p3])
 output
 [ 'Rizwan', 'Ali', 'Khan' ]
 
+const p1=new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+       resolve('Rizwan');
+   },1000)
+})
+const p2=new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+       resolve('Ali');
+   },1000)
+})
+const p3=new Promise((resolve,reject)=>{
+   setTimeout(()=>{
+       reject('Khan');
+   },1200)
+})
+Promise.all([p1,p2,p3])
+.then((result)=>{
+    console.log(result)
+}).catch((err)=>{
+    console.log(err)
+})
+o/p 
+khan
