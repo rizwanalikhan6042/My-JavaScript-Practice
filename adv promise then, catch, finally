@@ -70,3 +70,31 @@ Promise.race([p1,p2,p3])
 })
 o/p
 Khan
+//promise.allSettled
+const p1=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Rizwan')
+    },1500)
+})
+const p2=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        resolve('Ali')
+    },1900)
+})
+const p3=new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        reject('Khan')
+    },1200)
+})
+Promise.allSettled([p1,p2,p3])
+.then((result)=>{
+    console.log('data is',result)
+}).catch((err)=>{
+    console.log(err)
+})
+o/p
+data is [
+  { status: 'fulfilled', value: 'Rizwan' },
+  { status: 'fulfilled', value: 'Ali' },
+  { status: 'rejected', reason: 'Khan' }
+]
