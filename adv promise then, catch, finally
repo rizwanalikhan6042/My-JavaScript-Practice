@@ -98,3 +98,15 @@ data is [
   { status: 'fulfilled', value: 'Ali' },
   { status: 'rejected', reason: 'Khan' }
 ]
+//.finally
+const myPromise = new Promise((resolve, reject) => {
+    setTimeout(() => reject("API request failed ❌"), 2000);
+});
+
+myPromise
+    .then((result) => console.log(result))
+    .catch((error) => console.log(error))
+    .finally(() => console.log("Operation Completed ✅")); 
+// Output:
+API request failed ❌
+Operation Completed ✅
